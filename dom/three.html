@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+dom
+        </title>
+    </head>
+  <body>
+    <script>
+
+        const div = document.createElement('div');
+        console.log(div)
+        div.className="main"
+        div.id = Math.floor(Math.random() * 10 + 1)
+        div.setAttribute("title", 'generatedTite')
+        div.style.backgroundColor="green"
+        div.style.padding="16px";
+       const addText = document.createTextNode("test")
+       div.appendChild(addText)
+       document.body.appendChild(div)
+    </script>
+  </body>
+
+
+</html>
