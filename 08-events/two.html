@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async codes </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h1>my code</h1>
+    <button id="stop">stop</button>
+    <button id="start">start</button>
+    <script>
+
+        const h1 = document.querySelector('h1')
+
+        function changeH2(){
+            h1.innerHTML = 'javascript async code'
+        }
+         
+
+        document.querySelector('#start').addEventListener('click', () => {
+            const newh = setTimeout(changeH2, 2000)
+        })
+       
+       document.querySelector('#stop').addEventListener('click', () => {
+        clearTimeout(newh)
+       })
+    </script>
+    </body>
+    </html>
