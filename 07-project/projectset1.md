@@ -213,3 +213,28 @@ function startGame() {
 }
 
  ```
+
+ ## project 5
+ ``` javascript
+ 
+ let randomColor = () => {
+  const hex = '0123456ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+let intervalId;
+function changeColor() {
+  intervalId = setInterval(() => {
+    document.querySelector('body').style.backgroundColor = randomColor();
+  }, 1000);
+}
+function stopChangeColor() {
+  clearInterval(intervalId);
+  intervalId = null;
+}
+document.querySelector('#start').addEventListener('click', changeColor);
+document.querySelector('#stop').addEventListener('click', stopChangeColor);
+ ```
